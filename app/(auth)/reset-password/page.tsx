@@ -1,44 +1,45 @@
 export const metadata = {
-  title: 'Reset Password - Open PRO',
-  description: 'Page description',
-}
+  title: "Reset Password - Open PRO",
+  description: "Page description",
+};
 
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function ResetPassword() {
   return (
-    <section className="relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-
-          {/* Page header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h1 className="h1 mb-4">Forgot your password?</h1>
-            <p className="text-xl text-gray-400">We'll email you instructions on how to reset it.</p>
+    <section>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="py-12 md:py-20">
+          {/* Section header */}
+          <div className="pb-12 text-center">
+            <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+              Reset your password
+            </h1>
           </div>
-
-          {/* Form */}
-          <div className="max-w-sm mx-auto">
-            <form>
-              <div className="flex flex-wrap -mx-3 mb-4">
-                <div className="w-full px-3">
-                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Email</label>
-                  <input id="email" type="email" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mt-6">
-                <div className="w-full px-3">
-                  <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Reset Password</button>
-                </div>
-              </div>
-            </form>
-            <div className="text-gray-400 text-center mt-6">
-              <Link href="/signin" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Cancel</Link>
+          {/* Contact form */}
+          <form className="mx-auto max-w-[400px]">
+            <div>
+              <label
+                className="mb-1 block text-sm font-medium text-indigo-200/65"
+                htmlFor="email"
+              >
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                className="form-input w-full"
+                placeholder="Your email"
+              />
             </div>
-          </div>
-
+            <div className="mt-6">
+              <button className="btn w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]">
+                Reset Password
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
-  )
+  );
 }
